@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Premier League</title>
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premier League">
+  <link rel="apple-touch-icon" href="/icon-192x192.png">
+  <link rel="icon" href="/images/icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4a148c">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!--Navigasi-->
+  <nav class="purple darken-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#home" class="brand-logo" id="logo-container"><b>EPL</b></a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+      <ul class="topnav right hide-on-med-and-down">
+        <li><a class="waves-effect" href="./#home">Home</a></li>
+        <li><a class="waves-effect" href="./#myfavorite">My Favorite</a></li>
+      </ul>
+      <ul class="sidenav" id="nav-mobile">
+        <li><a class="waves-effect" href="./#home">Home</a></li>
+        <li><a class="waves-effect" href="./#myfavorite">My Favorite</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!--Akhir Navigasi-->
+
+  <div class="container" id="body-content">
+
+    <div class="container">
+      </br>
+      <div class="center">
+        <img id="logoTeam" width="150">
+        <h4 id="namaTeam"></h4>
+        <h6>Founded : <span id="founded"></span></h6>
+      </div>
+
+      <div id="buttonSave">
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large purple darken-4 pulse" id="addToFavorite">
+            <i class="large material-icons">bookmark_border</i>
+          </a>
+        </div>
+      </div>
+
+      </br>
+      <div id="detailTeam">
+      </div>
+    </div>
+
+    <div class="center" id="spinner-loader">
+      <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--JavaScript-->
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/sw-register.js"></script>
+    <script src="/js/idb.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/detail.js"></script>
+</body>
+
+</html>
